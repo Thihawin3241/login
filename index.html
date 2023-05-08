@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuBar</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <i class='bx bx-menu-alt-right icons'></i>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <button class="login">Login</button>
+        </ul>
+    </header>
+    <section>
+        <i class='bx bx-window-close'></i>
+        <div class="Container">
+            <div class="head">
+                <h1>Login</h1>
+                <a href="">Please login to use the platform</a>
+            </div>
+            <div class="input">
+                <label for="">Email</label>
+                <i class='bx bx-envelope'></i>
+                <input type="text" required>
+            </div>
+            <div class="input">
+                <i class='bx bx-lock-alt'></i>
+                <label for="">Password</label>
+                <input type="password" required>
+            </div>
+            <div class="check">
+                <div class="text">
+                    <input type="checkbox">
+                    <sapn>Remmeber</sapn>
+                </div>
+                <a href="">Forgot Password?</a>
+            </div>
+            <div class="login">
+            <button>login</button>
+            </div>
+
+            <div class="register">
+                <p>Don't have an account? Register</p>
+            </div>
+            <div class="gg">
+                <button>Login with Google</button>
+                <button>Login with Facebook</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let login = document.querySelector(".login");
+        let sectionTag = document.querySelector("section")
+        let icon = document.querySelector("section i")
+        let icons = document.querySelector(".icons")
+        let header = document.querySelector("header ul")
+        login.addEventListener("click",()=> {
+            sectionTag.style.display = "block";
+            header.style.display = "none"
+        })
+        icon.addEventListener("click",()=> {
+            sectionTag.style.display = "none"
+            icons.style.display = "block"
+        })
+        icons.addEventListener("click",()=> {
+            header.style.display = "block"
+            icons.style.display = "none"
+        })
+    </script>
+</body>
+</html>
